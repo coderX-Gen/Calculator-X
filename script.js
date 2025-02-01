@@ -37,14 +37,6 @@ function squareRoot() {
     } catch (error) {
         display.value = 'Error';
     }
-}
 
-/*Evaluate the expression  in the display
-function calculate() {
-    try {
-        //use eval to evaluate the expression entered by user
-        display.value = eval(display.value);
-    } catch (error) {
-        display.value = 'Error';
-    }
-}*/
+
+
