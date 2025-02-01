@@ -17,25 +17,14 @@ function square() {
 }   catch (error){
     display.value='Error';
 }
-// Modulo operation function
-function modulo() {
-    try {
-        let values = display.value.split('%');
-        if (values.length === 2) {
-            let num1 = parseFloat(values[0]);
-            let num2 = parseFloat(values[1]);
-            if (num2 === 0) {
-                display.value = 'Error'; // Error message for division by zero
-            } else {
-                display.value = num1 % num2; // Modulo operation
-            }
-        } else {
-            display.value = 'Error'; // If the input doesn't contain two numbers and the '%' operator
-        }
+
+    function calculate() {
+    try{let expression = display.value.replace(/(\d+)%/g,'($1/100)');
+        display.value= eval(expression);
     } catch (error) {
-        display.value = 'Error'; // Handle any other errors
+        display.value='Error';
     }
-}
+    }
 
 function backspace(){
     display.value =
