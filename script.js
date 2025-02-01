@@ -26,17 +26,6 @@ function calculate() {
         display.value='Error';
     }
 
-}
-let backspaceInterval;
-function startBackspace(){
-    backspace(); // Delete the first character immediately
-
-    // Starts continuous deletion
-    backspaceinterval=
-    setInterval(backspace,100);
-}
-function stopBackspace() {
-    clear Interval(backspaceInterval);// Stops the backspace loop
 function backspace(){
     display.value =
     display.value.slice(0,-1);
