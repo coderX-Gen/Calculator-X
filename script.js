@@ -17,7 +17,7 @@ function square() {
 }   catch (error){
     display.value='Error';
 }
-
+}
     function calculate() {
     try{let expression = display.value.replace(/(\d+)%/g,'($1/100)');
         display.value= eval(expression);
