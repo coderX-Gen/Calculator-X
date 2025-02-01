@@ -25,6 +25,7 @@ function calculate() {
     } catch (error) {
         display.value='Error';
     }
+}
 
 function backspace(){
     display.value =
@@ -37,6 +38,7 @@ function squareRoot() {
     } catch (error) {
         display.value = 'Error';
     }
+}
 
 
 
