@@ -28,19 +28,6 @@ function square() {
 
 
 
-function modulo() {
-    try {
-        let values = display.value.split('%');
-        if (values.length === 2) {
-            let result = parseFloat(values[0]) % parseFloat(values[1]);
-            display.value = result;
-        } else {
-            display.value = 'Error';
-        }
-    } catch (error) {
-        display.value = 'Error';
-    }
-}
 
 
 function backspace(){
