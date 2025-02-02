@@ -25,16 +25,23 @@ function square() {
         display.value='Error';
     }
     }*/
-// Calculate the result, including modulo
-function calculate() {
+
+
+
+function modulo() {
     try {
-        
-        let expression = display.value.replace(/(\d+)%(\d+)/g, (match, num1, num2) => `(${num1} % ${num2})`);
-        display.value = eval(expression); // Evaluate the expression
+        let values = display.value.split('%');
+        if (values.length === 2) {
+            let result = parseFloat(values[0]) % parseFloat(values[1]);
+            display.value = result;
+        } else {
+            display.value = 'Error';
+        }
     } catch (error) {
         display.value = 'Error';
     }
 }
+
 
 function backspace(){
     display.value =
