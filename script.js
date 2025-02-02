@@ -26,7 +26,14 @@ function square() {
     }
     }*/
 
-
+function calculate() {
+    try {
+        let expression = display.value.replace(/(\d+)%(\d+)/g, '($1%$2)');
+        display.value = eval(expression);
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
 
 
 
